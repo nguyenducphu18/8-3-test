@@ -106,12 +106,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Hàm cập nhật đường link cá nhân
     function updatePersonalLinks() {
         const hostname = window.location.href.split('?')[0];
-        const linkItems = document.querySelectorAll('.link-item');
-        linkItems.forEach(item => {
-            const name = item.dataset.name;
-            const linkElement = item.querySelector('.personal-link');
-            linkElement.textContent = `${hostname}?name=${name}`;
-        });
+        linkListDiv.innerHTML = ''; // Clear existing links
+        for (const nameKey in nameMapping) {
+            const fullName = nameMapping[nameKey];
+            const linkItemDiv = document.createElement('div');
+            linkItemDiv.className = 'link-item';
+            linkItemDiv.innerHTML = `${fullName}: <code>${hostname}?name=${nameKey}</code>`;
+            linkListDiv.appendChild(linkItemDiv);
+        }
     }
 
     // Hàm kiểm tra quyền admin để hiển thị các đường dẫn cá nhân
@@ -126,27 +128,38 @@ document.addEventListener('DOMContentLoaded', function () {
             personalLinksSection.classList.add('hidden');
         }
     }
+
+    // Hàm tạo danh sách người
+    function generatePersonList() {
+        personListDiv.innerHTML = ''; // Clear existing list
+        for (const nameKey in nameMapping) {
+            const fullName = nameMapping[nameKey];
+            const personLink = document.createElement('a');
+            personLink.href = `?name=${nameKey}`;
+            personLink.className = 'person-button';
+            personLink.textContent = `🌷 ${fullName}`;
+            personListDiv.appendChild(personLink);
+        }
+    }
+
+
     // Xử lý khi trang tải xong
     function handlePageLoad() {
         generatePersonList();
         checkAdminAccess();
 
-        
         const nameKey = getNameFromUrl();
-        const name = nameMapping[nameKey];
-
         if (nameKey) {
+            const name = nameMapping[nameKey];
             const wish = getRandomWish(nameKey);
-            personNameElement.textContent = name; // Hiển thị tên đầy đủ
-            wishTextElement.textContent = wish; // Hiển thị lời chúc có tên đầy đủ
+            personNameElement.textContent = name;
+            wishTextElement.textContent = wish;
             homePage.style.display = 'none';
             wishCard.style.display = 'block';
         } else {
             homePage.style.display = 'block';
             wishCard.style.display = 'none';
         }
-
-        updatePersonalLinks();
     }
 
     handlePageLoad();
