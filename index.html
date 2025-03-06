@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chúc mừng ngày 8/3 - Euro Santé</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Chúc mừng ngày Quốc tế Phụ nữ 8/3!</h1>
+      <h2>Công ty cổ phần dược phẩm Euro Santé</h2>
+    </div>
+
+    <div id="home-page" class="card">
+      <h3 class="section-title">Chọn tên của bạn để nhận lời chúc:</h3>
+      <div class="person-list">
+        <a href="?name=TranMo" class="person-button">🌷 Trần Mơ</a>
+        <a href="?name=NguyenThuy" class="person-button">🌷 Nguyễn Thúy</a>
+        <a href="?name=NguyenNgoc" class="person-button">🌷 Nguyễn Ngọc</a>
+        <a href="?name=ThuyLinh" class="person-button">🌷 Thùy Linh</a>
+        <a href="?name=NhatLinh" class="person-button">🌷 Nhật Linh</a>
+        <a href="?name=KhanhHuyen" class="person-button">🌷 Khánh Huyền</a>
+        <a href="?name=KhanhLy" class="person-button">🌷 Khánh Ly</a>
+        <a href="?name=ThuyHang" class="person-button">🌷 Thúy Hằng</a>
+        <a href="?name=ThuyDung" class="person-button">🌷 Thùy Dung</a>
+      </div>
+
+      <div class="links-section">
+        <h3 class="section-title">Đường link cá nhân:</h3>
+        <p>Sao chép và gửi link dưới đây cho từng người:</p>
+
+        <div class="link-list">
+          <div class="link-item" data-name="TranMo">Trần Mơ: <code class="personal-link">trang-web-cua-ban.com?name=TranMo</code></div>
+          <div class="link-item" data-name="NguyenThuy">Nguyễn Thúy: <code class="personal-link">trang-web-cua-ban.com?name=NguyenThuy</code></div>
+          <div class="link-item" data-name="NguyenNgoc">Nguyễn Ngọc: <code class="personal-link">trang-web-cua-ban.com?name=NguyenNgoc</code></div>
+          <div class="link-item" data-name="ThuyLinh">Thùy Linh: <code class="personal-link">trang-web-cua-ban.com?name=ThuyLinh</code></div>
+          <div class="link-item" data-name="NhatLinh">Nhật Linh: <code class="personal-link">trang-web-cua-ban.com?name=NhatLinh</code></div>
+          <div class="link-item" data-name="KhanhHuyen">Khánh Huyền: <code class="personal-link">trang-web-cua-ban.com?name=KhanhHuyen</code></div>
+          <div class="link-item" data-name="KhanhLy">Khánh Ly: <code class="personal-link">trang-web-cua-ban.com?name=KhanhLy</code></div>
+          <div class="link-item" data-name="ThuyHang">Thúy Hằng: <code class="personal-link">trang-web-cua-ban.com?name=ThuyHang</code></div>
+          <div class="link-item" data-name="ThuyDung">Thùy Dung: <code class="personal-link">trang-web-cua-ban.com?name=ThuyDung</code></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="wish-card" class="card" style="display: none;">
+      <div class="wish-title">Chúc mừng <span id="person-name"></span>! 💐</div>
+      <div id="wish-text" class="wish-text"></div>
+      <a href="?" class="back-button">Quay lại danh sách</a>
+    </div>
+
+    <div class="footer">
+      <p>❤️ Chúc các chị em luôn xinh đẹp, hạnh phúc và thành công! ❤️</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
