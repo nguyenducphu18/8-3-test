@@ -116,3 +116,7 @@ h2 {
 .link-item {
   margin-bottom: 8px;
 }
+
+.hidden {
+  display: none;
+}
