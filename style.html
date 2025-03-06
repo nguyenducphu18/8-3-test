@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc mừng ngày 8/3 - Euro Santé</title>
+    <meta name="description" content="Chúc mừng ngày Quốc tế Phụ nữ 8/3 từ Công ty cổ phần dược phẩm Euro Santé. Nhận lời chúc cá nhân hóa và xem danh sách liên kết cá nhân.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Chúc mừng ngày Quốc tế Phụ nữ 8/3!</h1>
+            <h2>Công ty cổ phần dược phẩm Euro Santé</h2>
+        </div>
+        <div id="home-page" class="card">
+            <h3 class="card-title">Chọn tên của bạn để nhận lời chúc:</h3>
+            <div class="person-list">
+                </div>
+            <div class="links-section">
+                <h3 class="card-title">Đường link cá nhân:</h3>
+                <p>Nhấn vào link dưới đây để xem trước lời chúc cho từng người:</p>
+                <div class="link-list" id="link-list">
+                    </div>
+            </div>
+        </div>
+        <div id="wish-card" class="card" style="display: none;">
+            <div class="wish-title">Chúc mừng <span id="person-name"></span>! </div>
+            <div id="wish-text" class="wish-text"></div>
+            <a href="?" class="flower-button">
+                <span class="flower"></span>
+                <span class="flower-text">Quay lại danh sách</span>
+            </a>
+        </div>
+        <div id="error-card" class="card" style="display: none;">
+            <div class="error-message" style="display: block;">
+                Tên không hợp lệ hoặc không tồn tại. Vui lòng kiểm tra lại link hoặc chọn tên từ danh sách.
+            </div>
+            <a href="?" class="flower-button">
+                <span class="flower"></span>
+                <span class="flower-text">Quay lại danh sách</span>
+            </a>
+        </div>
+        <div class="footer">
+            <p>❤️ Chúc các chị em luôn xinh đẹp, hạnh phúc và thành công! ❤️</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
