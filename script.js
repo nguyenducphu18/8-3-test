@@ -81,6 +81,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const homePage = document.getElementById('home-page');
     const personNameElement = document.getElementById('person-name');
     const wishTextElement = document.getElementById('wish-text');
+    const personalLinksSection = document.getElementById('personal-links-section');
+    const personListDiv = document.getElementById('person-list');
+    const linkListDiv = document.getElementById('link-list');
 
     // Hàm lấy tên từ URL
     function getNameFromUrl() {
@@ -111,8 +114,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Hàm kiểm tra quyền admin để hiển thị các đường dẫn cá nhân
+    function checkAdminAccess() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const isAdmin = urlParams.get('admin') === 'true';
+
+        if (isAdmin) {
+            personalLinksSection.classList.remove('hidden');
+            updatePersonalLinks();
+        } else {
+            personalLinksSection.classList.add('hidden');
+        }
+    }
     // Xử lý khi trang tải xong
     function handlePageLoad() {
+        generatePersonList();
+        checkAdminAccess();
+
+        
         const nameKey = getNameFromUrl();
         const name = nameMapping[nameKey];
 
