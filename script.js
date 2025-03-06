@@ -1,48 +1,78 @@
+const nameMapping = {
+  'TranMo': 'Trần Mơ',
+  'NguyenThuy': 'Nguyễn Thúy',
+  'NguyenNgoc': 'Nguyễn Ngọc',
+  'ThuyLinh': 'Thùy Linh',
+  'NhatLinh': 'Nhật Linh',
+  'KhanhHuyen': 'Khánh Huyền',
+  'KhanhLy': 'Khánh Ly',
+  'ThuyHang': 'Thúy Hằng',
+  'ThuyDung': 'Thùy Dung'
+};
+
 const wishes = {
   TranMo: [
-    "Nhân ngày Quốc tế Phụ nữ 8/3, chúc chị Trần Mơ luôn xinh đẹp, hạnh phúc và thành công trong cuộc sống. Cảm ơn vì những đóng góp quý báu của chị cho công ty Euro Santé của chúng ta!",
-    "Chúc mừng ngày 8/3! Chị Trần Mơ ơi, chúc chị luôn tươi trẻ, năng động và đạt được nhiều thành tựu trong sự nghiệp. Cảm ơn vì sự tận tâm và nỗ lực không ngừng của chị!",
-    "Gửi đến chị Trần Mơ lời chúc mừng nhân ngày 8/3! Chúc chị mãi xinh đẹp, tràn đầy năng lượng và gặt hái nhiều thành công. Euro Santé rất may mắn khi có chị!"
+    "Chúc chị Trần Mơ ngày 8/3 tràn đầy niềm vui và hạnh phúc! Mong chị luôn xinh đẹp và thành công trong mọi lĩnh vực.",
+    "Nhân ngày Quốc tế Phụ nữ, gửi đến chị Trần Mơ những lời chúc tốt đẹp nhất. Chúc chị luôn tươi trẻ, yêu đời và gặt hái được nhiều thành công mới!",
+    "8/3 này, chúc chị Trần Mơ luôn là bông hoa đẹp nhất trong vườn hoa của cuộc đời. Mong chị luôn giữ được nụ cười rạng rỡ và trái tim ấm áp.",
+    "Chúc chị Trần Mơ có một ngày 8/3 thật ý nghĩa bên gia đình và những người thân yêu. Mong chị luôn được yêu thương và trân trọng!",
+    "Gửi đến chị Trần Mơ những lời chúc chân thành nhất nhân ngày 8/3. Chúc chị luôn mạnh khỏe, hạnh phúc và thành công trên con đường sự nghiệp."
   ],
   NguyenThuy: [
-    "Nhân ngày Quốc tế Phụ nữ 8/3, chúc chị Nguyễn Thúy luôn xinh đẹp, hạnh phúc và thành công trong cuộc sống. Cảm ơn vì những đóng góp quý báu của chị cho công ty Euro Santé của chúng ta!",
-    "Chúc mừng ngày 8/3! Chị Nguyễn Thúy ơi, chúc chị luôn tươi trẻ, năng động và đạt được nhiều thành tựu trong sự nghiệp. Cảm ơn vì sự tận tâm và nỗ lực không ngừng của chị!",
-    "Gửi đến chị Nguyễn Thúy lời chúc mừng nhân ngày 8/3! Chúc chị mãi xinh đẹp, tràn đầy năng lượng và gặt hái nhiều thành công. Euro Santé rất may mắn khi có chị!"
+    "Chúc chị Nguyễn Thúy ngày 8/3 tràn đầy niềm vui và hạnh phúc! Mong chị luôn xinh đẹp và thành công trong mọi lĩnh vực.",
+    "Nhân ngày Quốc tế Phụ nữ, gửi đến chị Nguyễn Thúy những lời chúc tốt đẹp nhất. Chúc chị luôn tươi trẻ, yêu đời và gặt hái được nhiều thành công mới!",
+    "8/3 này, chúc chị Nguyễn Thúy luôn là bông hoa đẹp nhất trong vườn hoa của cuộc đời. Mong chị luôn giữ được nụ cười rạng rỡ và trái tim ấm áp.",
+    "Chúc chị Nguyễn Thúy có một ngày 8/3 thật ý nghĩa bên gia đình và những người thân yêu. Mong chị luôn được yêu thương và trân trọng!",
+    "Gửi đến chị Nguyễn Thúy những lời chúc chân thành nhất nhân ngày 8/3. Chúc chị luôn mạnh khỏe, hạnh phúc và thành công trên con đường sự nghiệp."
   ],
   NguyenNgoc: [
-        "Nhân ngày Quốc tế Phụ nữ 8/3, chúc chị Nguyễn Ngọc luôn xinh đẹp, hạnh phúc và thành công trong cuộc sống. Cảm ơn vì những đóng góp quý báu của chị cho công ty Euro Santé của chúng ta!",
-        "Chúc mừng ngày 8/3! Chị Nguyễn Ngọc ơi, chúc chị luôn tươi trẻ, năng động và đạt được nhiều thành tựu trong sự nghiệp. Cảm ơn vì sự tận tâm và nỗ lực không ngừng của chị!",
-        "Gửi đến chị Nguyễn Ngọc lời chúc mừng nhân ngày 8/3! Chúc chị mãi xinh đẹp, tràn đầy năng lượng và gặt hái nhiều thành công. Euro Santé rất may mắn khi có chị!"
+        "Chúc chị Nguyễn Ngọc ngày 8/3 tràn đầy niềm vui và hạnh phúc! Mong chị luôn xinh đẹp và thành công trong mọi lĩnh vực.",
+        "Nhân ngày Quốc tế Phụ nữ, gửi đến chị Nguyễn Ngọc những lời chúc tốt đẹp nhất. Chúc chị luôn tươi trẻ, yêu đời và gặt hái được nhiều thành công mới!",
+        "8/3 này, chúc chị Nguyễn Ngọc luôn là bông hoa đẹp nhất trong vườn hoa của cuộc đời. Mong chị luôn giữ được nụ cười rạng rỡ và trái tim ấm áp.",
+        "Chúc chị Nguyễn Ngọc có một ngày 8/3 thật ý nghĩa bên gia đình và những người thân yêu. Mong chị luôn được yêu thương và trân trọng!",
+        "Gửi đến chị Nguyễn Ngọc những lời chúc chân thành nhất nhân ngày 8/3. Chúc chị luôn mạnh khỏe, hạnh phúc và thành công trên con đường sự nghiệp."
   ],
   ThuyLinh: [
-        "Nhân ngày Quốc tế Phụ nữ 8/3, chúc chị Thùy Linh luôn xinh đẹp, hạnh phúc và thành công trong cuộc sống. Cảm ơn vì những đóng góp quý báu của chị cho công ty Euro Santé của chúng ta!",
-        "Chúc mừng ngày 8/3! Chị Thùy Linh ơi, chúc chị luôn tươi trẻ, năng động và đạt được nhiều thành tựu trong sự nghiệp. Cảm ơn vì sự tận tâm và nỗ lực không ngừng của chị!",
-        "Gửi đến chị Thùy Linh lời chúc mừng nhân ngày 8/3! Chúc chị mãi xinh đẹp, tràn đầy năng lượng và gặt hái nhiều thành công. Euro Santé rất may mắn khi có chị!"
+        "Chúc chị Thùy Linh ngày 8/3 tràn đầy niềm vui và hạnh phúc! Mong chị luôn xinh đẹp và thành công trong mọi lĩnh vực.",
+        "Nhân ngày Quốc tế Phụ nữ, gửi đến chị Thùy Linh những lời chúc tốt đẹp nhất. Chúc chị luôn tươi trẻ, yêu đời và gặt hái được nhiều thành công mới!",
+        "8/3 này, chúc chị Thùy Linh luôn là bông hoa đẹp nhất trong vườn hoa của cuộc đời. Mong chị luôn giữ được nụ cười rạng rỡ và trái tim ấm áp.",
+        "Chúc chị Thùy Linh có một ngày 8/3 thật ý nghĩa bên gia đình và những người thân yêu. Mong chị luôn được yêu thương và trân trọng!",
+        "Gửi đến chị Thùy Linh những lời chúc chân thành nhất nhân ngày 8/3. Chúc chị luôn mạnh khỏe, hạnh phúc và thành công trên con đường sự nghiệp."
   ],
     NhatLinh: [
-        "Nhân ngày Quốc tế Phụ nữ 8/3, chúc chị Nhật Linh luôn xinh đẹp, hạnh phúc và thành công trong cuộc sống. Cảm ơn vì những đóng góp quý báu của chị cho công ty Euro Santé của chúng ta!",
-        "Chúc mừng ngày 8/3! Chị Nhật Linh ơi, chúc chị luôn tươi trẻ, năng động và đạt được nhiều thành tựu trong sự nghiệp. Cảm ơn vì sự tận tâm và nỗ lực không ngừng của chị!",
-        "Gửi đến chị Nhật Linh lời chúc mừng nhân ngày 8/3! Chúc chị mãi xinh đẹp, tràn đầy năng lượng và gặt hái nhiều thành công. Euro Santé rất may mắn khi có chị!"
+        "Chúc chị Nhật Linh ngày 8/3 tràn đầy niềm vui và hạnh phúc! Mong chị luôn xinh đẹp và thành công trong mọi lĩnh vực.",
+        "Nhân ngày Quốc tế Phụ nữ, gửi đến chị Nhật Linh những lời chúc tốt đẹp nhất. Chúc chị luôn tươi trẻ, yêu đời và gặt hái được nhiều thành công mới!",
+        "8/3 này, chúc chị Nhật Linh luôn là bông hoa đẹp nhất trong vườn hoa của cuộc đời. Mong chị luôn giữ được nụ cười rạng rỡ và trái tim ấm áp.",
+        "Chúc chị Nhật Linh có một ngày 8/3 thật ý nghĩa bên gia đình và những người thân yêu. Mong chị luôn được yêu thương và trân trọng!",
+        "Gửi đến chị Nhật Linh những lời chúc chân thành nhất nhân ngày 8/3. Chúc chị luôn mạnh khỏe, hạnh phúc và thành công trên con đường sự nghiệp."
   ],
     KhanhHuyen: [
-        "Nhân ngày Quốc tế Phụ nữ 8/3, chúc chị Khánh Huyền luôn xinh đẹp, hạnh phúc và thành công trong cuộc sống. Cảm ơn vì những đóng góp quý báu của chị cho công ty Euro Santé của chúng ta!",
-        "Chúc mừng ngày 8/3! Chị Khánh Huyền ơi, chúc chị luôn tươi trẻ, năng động và đạt được nhiều thành tựu trong sự nghiệp. Cảm ơn vì sự tận tâm và nỗ lực không ngừng của chị!",
-        "Gửi đến chị Khánh Huyền lời chúc mừng nhân ngày 8/3! Chúc chị mãi xinh đẹp, tràn đầy năng lượng và gặt hái nhiều thành công. Euro Santé rất may mắn khi có chị!"
+        "Chúc chị Khánh Huyền ngày 8/3 tràn đầy niềm vui và hạnh phúc! Mong chị luôn xinh đẹp và thành công trong mọi lĩnh vực.",
+        "Nhân ngày Quốc tế Phụ nữ, gửi đến chị Khánh Huyền những lời chúc tốt đẹp nhất. Chúc chị luôn tươi trẻ, yêu đời và gặt hái được nhiều thành công mới!",
+        "8/3 này, chúc chị Khánh Huyền luôn là bông hoa đẹp nhất trong vườn hoa của cuộc đời. Mong chị luôn giữ được nụ cười rạng rỡ và trái tim ấm áp.",
+        "Chúc chị Khánh Huyền có một ngày 8/3 thật ý nghĩa bên gia đình và những người thân yêu. Mong chị luôn được yêu thương và trân trọng!",
+        "Gửi đến chị Khánh Huyền những lời chúc chân thành nhất nhân ngày 8/3. Chúc chị luôn mạnh khỏe, hạnh phúc và thành công trên con đường sự nghiệp."
   ],
     KhanhLy: [
-        "Nhân ngày Quốc tế Phụ nữ 8/3, chúc chị Khánh Ly luôn xinh đẹp, hạnh phúc và thành công trong cuộc sống. Cảm ơn vì những đóng góp quý báu của chị cho công ty Euro Santé của chúng ta!",
-        "Chúc mừng ngày 8/3! Chị Khánh Ly ơi, chúc chị luôn tươi trẻ, năng động và đạt được nhiều thành tựu trong sự nghiệp. Cảm ơn vì sự tận tâm và nỗ lực không ngừng của chị!",
-        "Gửi đến chị Khánh Ly lời chúc mừng nhân ngày 8/3! Chúc chị mãi xinh đẹp, tràn đầy năng lượng và gặt hái nhiều thành công. Euro Santé rất may mắn khi có chị!"
+        "Chúc chị Khánh Ly ngày 8/3 tràn đầy niềm vui và hạnh phúc! Mong chị luôn xinh đẹp và thành công trong mọi lĩnh vực.",
+        "Nhân ngày Quốc tế Phụ nữ, gửi đến chị Khánh Ly những lời chúc tốt đẹp nhất. Chúc chị luôn tươi trẻ, yêu đời và gặt hái được nhiều thành công mới!",
+        "8/3 này, chúc chị Khánh Ly luôn là bông hoa đẹp nhất trong vườn hoa của cuộc đời. Mong chị luôn giữ được nụ cười rạng rỡ và trái tim ấm áp.",
+        "Chúc chị Khánh Ly có một ngày 8/3 thật ý nghĩa bên gia đình và những người thân yêu. Mong chị luôn được yêu thương và trân trọng!",
+        "Gửi đến chị Khánh Ly những lời chúc chân thành nhất nhân ngày 8/3. Chúc chị luôn mạnh khỏe, hạnh phúc và thành công trên con đường sự nghiệp."
   ],
     ThuyHang: [
-        "Nhân ngày Quốc tế Phụ nữ 8/3, chúc chị Thúy Hằng luôn xinh đẹp, hạnh phúc và thành công trong cuộc sống. Cảm ơn vì những đóng góp quý báu của chị cho công ty Euro Santé của chúng ta!",
-        "Chúc mừng ngày 8/3! Chị Thúy Hằng ơi, chúc chị luôn tươi trẻ, năng động và đạt được nhiều thành tựu trong sự nghiệp. Cảm ơn vì sự tận tâm và nỗ lực không ngừng của chị!",
-        "Gửi đến chị Thúy Hằng lời chúc mừng nhân ngày 8/3! Chúc chị mãi xinh đẹp, tràn đầy năng lượng và gặt hái nhiều thành công. Euro Santé rất may mắn khi có chị!"
+        "Chúc chị Thúy Hằng ngày 8/3 tràn đầy niềm vui và hạnh phúc! Mong chị luôn xinh đẹp và thành công trong mọi lĩnh vực.",
+        "Nhân ngày Quốc tế Phụ nữ, gửi đến chị Thúy Hằng những lời chúc tốt đẹp nhất. Chúc chị luôn tươi trẻ, yêu đời và gặt hái được nhiều thành công mới!",
+        "8/3 này, chúc chị Thúy Hằng luôn là bông hoa đẹp nhất trong vườn hoa của cuộc đời. Mong chị luôn giữ được nụ cười rạng rỡ và trái tim ấm áp.",
+        "Chúc chị Thúy Hằng có một ngày 8/3 thật ý nghĩa bên gia đình và những người thân yêu. Mong chị luôn được yêu thương và trân trọng!",
+        "Gửi đến chị Thúy Hằng những lời chúc chân thành nhất nhân ngày 8/3. Chúc chị luôn mạnh khỏe, hạnh phúc và thành công trên con đường sự nghiệp."
   ],
   ThuyDung: [
-        "Nhân ngày Quốc tế Phụ nữ 8/3, chúc chị Thùy Dung luôn xinh đẹp, hạnh phúc và thành công trong cuộc sống. Cảm ơn vì những đóng góp quý báu của chị cho công ty Euro Santé của chúng ta!",
-        "Chúc mừng ngày 8/3! Chị Thùy Dung ơi, chúc chị luôn tươi trẻ, năng động và đạt được nhiều thành tựu trong sự nghiệp. Cảm ơn vì sự tận tâm và nỗ lực không ngừng của chị!",
-        "Gửi đến chị Thùy Dung lời chúc mừng nhân ngày 8/3! Chúc chị mãi xinh đẹp, tràn đầy năng lượng và gặt hái nhiều thành công. Euro Santé rất may mắn khi có chị!"
+        "Chúc chị Thùy Dung ngày 8/3 tràn đầy niềm vui và hạnh phúc! Mong chị luôn xinh đẹp và thành công trong mọi lĩnh vực.",
+        "Nhân ngày Quốc tế Phụ nữ, gửi đến chị Thùy Dung những lời chúc tốt đẹp nhất. Chúc chị luôn tươi trẻ, yêu đời và gặt hái được nhiều thành công mới!",
+        "8/3 này, chúc chị Thùy Dung luôn là bông hoa đẹp nhất trong vườn hoa của cuộc đời. Mong chị luôn giữ được nụ cười rạng rỡ và trái tim ấm áp.",
+        "Chúc chị Thùy Dung có một ngày 8/3 thật ý nghĩa bên gia đình và những người thân yêu. Mong chị luôn được yêu thương và trân trọng!",
+        "Gửi đến chị Thùy Dung những lời chúc chân thành nhất nhân ngày 8/3. Chúc chị luôn mạnh khỏe, hạnh phúc và thành công trên con đường sự nghiệp."
   ]
 };
 
@@ -82,11 +112,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Xử lý khi trang tải xong
   function handlePageLoad() {
-    const name = getNameFromUrl();
+    const nameKey = getNameFromUrl();
+      const name = nameMapping[nameKey];
 
-    if (name) {
-      const wish = getRandomWish(name);
-      personNameElement.textContent = wishes[name] ? name : 'bạn'; // Sử dụng tên nếu có trong danh sách
+    if (nameKey) {
+      const wish = getRandomWish(nameKey);
+      personNameElement.textContent = name; // Sử dụng tên đầy đủ
       wishTextElement.textContent = wish;
       homePage.style.display = 'none';
       wishCard.style.display = 'block';
